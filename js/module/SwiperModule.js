@@ -244,7 +244,7 @@ export default function SwiperModule() {
     disableOnInteraction: true,
   });
 
-  const slLogo = document.querySelector(".logo-slide .swiper-container")
+  const slLogo = document.querySelector(".logo-slide .swiper-container");
 
   if (slLogo) {
     var swiper = new Swiper(".logo-slide .swiper-container", {
@@ -259,7 +259,7 @@ export default function SwiperModule() {
     });
   }
 
-  const ftCt = document.querySelectorAll(".feature-content")
+  const ftCt = document.querySelectorAll(".feature-content");
 
   if (ftCt.length > 0) {
     ftCt.forEach((ele, i) => {
@@ -275,10 +275,10 @@ export default function SwiperModule() {
           clickable: true,
         },
       });
-    })
+    });
   }
 
-  const category = document.querySelector(".cate-silde .swiper-container")
+  const category = document.querySelector(".cate-silde .swiper-container");
 
   if (category) {
     var swiper = new Swiper(category, {
@@ -304,7 +304,7 @@ export default function SwiperModule() {
         800: {
           slidesPerView: 5,
         },
-      }
+      },
     });
   }
 
@@ -312,8 +312,6 @@ export default function SwiperModule() {
   const prMain = document.querySelector(".product-main");
 
   if (prMain && prThums) {
-   
-
     var thumbs = new Swiper(prThums.querySelector(".swiper-container"), {
       direction: "vertical",
       mousewheel: {
@@ -333,7 +331,7 @@ export default function SwiperModule() {
         clickable: true,
       },
       pagination: {
-        el:prThums.querySelector( ".swiper-pagination"),
+        el: prThums.querySelector(".swiper-pagination"),
         type: "progressbar",
       },
     });
@@ -344,8 +342,19 @@ export default function SwiperModule() {
       loop: true,
       slidesPerView: 1,
       thumbs: {
-        swiper : thumbs
-      }
+        swiper: thumbs,
+      },
+    });
+  }
+
+  const colorSl = document.querySelector(".color-content");
+
+  if (colorSl) {
+    var swiper = new Swiper(colorSl.querySelector(".swiper-container"), {
+      spaceBetween: 32,
+      speed: 1000,
+      loop: true,
+      slidesPerView: 4,
     });
   }
 }

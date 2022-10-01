@@ -62,4 +62,14 @@
             }
         }
     }
+
+    &-info {
+        width: calc(100% * 5 / 12);
+
+        .rating {
+            &-list {
+                margin-right: 0.8rem;
+            }
+        }
+    }
 }

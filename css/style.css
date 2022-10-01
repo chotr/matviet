@@ -9865,5 +9865,11 @@ iframe {
 .product-thumbs .swiper-slide-thumb-active {
   opacity: 1;
 }
+.product-info {
+  width: 41.6666666667%;
+}
+.product-info .rating-list {
+  margin-right: 0.8rem;
+}
 
 /*# sourceMappingURL=style.css.map */
