@@ -1,0 +1,423 @@
+:root {
+    --btBanner: 9.4rem;
+
+    @media (max-width: 1200px) {
+        --btBanner: 5rem;
+    }
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+
+    .container {
+        height: 100%;
+    }
+
+
+    &-wrap {
+        height: 100%;
+        z-index: 100;
+    }
+
+    &-bg {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-breadcrumbs {
+        height: calc(100vw * 330 / 1728);
+
+        @include max(1200px) {
+            height: 22vw;
+        }
+
+        @include max(800px) {
+            height: 32vw;
+        }
+
+        @include max(600px) {
+            height: 42vw;
+        }
+
+        @include max(450px) {
+            height: 50vw;
+        }
+
+        @include max(350px) {
+            height: 60vw;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
+        }
+
+        .banner {
+            &-title {
+                color: white;
+
+                @include max(600px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .breadcrumbs {
+            &-lst {
+                justify-content: center;
+            }
+
+            a {
+                color: white;
+                font-weight: 500;
+            }
+
+            &-item {
+                &::before {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+
+    &-medium {
+        height: calc(100vw * 500 / 1728);
+
+
+        @include max(1200px) {
+            height: 40vw;
+        }
+
+        @include max(600px) {
+            height: 50vw;
+        }
+
+        @include max(400px) {
+            height: 70vw;
+        }
+
+        @include max(320px) {
+            height: 100vw;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url(5a7e.jpg), linear-gradient(180deg, rgba(0, 0, 0, 0) 52.9%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 6;
+        }
+
+        .banner {
+            &-wrap {
+
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
+
+                .decor-image {
+                    position: absolute;
+                    z-index: 2;
+                    opacity: 0.2;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            &-image {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+
+            &-content {
+                position: relative;
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                @include flex;
+                flex-direction: column;
+                align-content: flex-end;
+                align-items: flex-end;
+                justify-content: flex-end;
+                color: white;
+
+                .container {
+                    height: auto;
+                }
+
+                .wrap {
+                    text-align: right;
+                    padding-bottom: 2.4rem;
+                }
+
+                .title {
+                    margin-bottom: 0.7rem;
+                }
+
+                .text {
+                    max-width: 50.3rem;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+
+    &-home {
+        height: calc(100vw * 800 / 1728);
+
+        @media (max-width: 1024px) {
+            height: 55vw;
+        }
+
+        @media (max-width: 900px) {
+            height: 60vw;
+        }
+
+        @media (max-width: 800px) {
+            height: 75vw;
+        }
+
+        @media (max-width: 600px) {
+            height: 100vw;
+        }
+
+        @media (max-width: 360px) {
+            height: 130vw;
+        }
+
+        .banner {
+            &-slide {
+                height: 100%;
+            }
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s;
+        }
+
+        .collect {
+            &-list {
+                height: 100%;
+            }
+
+            &-item {
+                height: 100%;
+                flex: 1;
+                @include transition(1s, ease-in-out);
+                position: relative;
+                user-select: none;
+                overflow: hidden;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.25%, #000000 100%);
+                    z-index: 0;
+                }
+
+                &:hover {
+                    flex: 3.1;
+
+                    @include max(1200px) {
+                        flex: 4;
+                    }
+
+                    @include max(800px) {
+                        flex: 4.5;
+                    }
+
+                    .content {
+                        left: 2.3rem;
+
+                        @include max(1400px) {
+                            left: 1.2rem;
+                        }
+
+                        @include max(1200px) {
+                            left: 0;
+                        }
+                    }
+
+                    .content-hover {
+                        height: 100%;
+                    }
+                }
+
+                .content {
+                    bottom: 0;
+                    left: 0;
+                    color: #fff;
+                    padding: 5.7rem 2.5rem;
+                    height: auto;
+                    z-index: 10;
+                    transition: all 0.5s ease-in-out;
+
+                    @include max(1200px) {
+                        padding: 3rem 1.5rem;
+                    }
+
+                    &-hover {
+                        display: none;
+                        // transition-delay: 0.2s;
+                        width: max-content;
+                        max-width: 64rem;
+
+                        @include max(1200px) {
+                            max-width: 48rem;
+                        }
+
+                        @include max(800px) {
+                            max-width: 36rem;
+                        }
+                    }
+
+                }
+
+                .go-to-shop {
+                    .btn {
+                        &-inner {
+                            @include max(1024px) {
+                                min-width: auto;
+                            }
+                        }
+
+
+                        &:first-child {
+                            margin-right: 2rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .swiper {
+            &-slide {
+                .img {
+                    transition: all 1s;
+                    height: 100%;
+                }
+
+
+                &.my-active {}
+            }
+        }
+
+        .tag {
+            letter-spacing: 0.24em;
+            font-family: 'SVN-Gilroy';
+            font-weight: 500;
+        }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: calc(100% + 6rem)
+    }
+}
+
+@keyframes typing2 {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes moveIn {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: $color-second;
+    }
+}
+
+@keyframes blink-caret2 {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+
+@keyframes fadeCus {
+    0% {
+        opacity: 0;
+        transform: scale(0.94, 0.9);
+        filter: grayscale(1);
+        box-shadow: -2px -1px 121px 89px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: -2px -1px 121px 89px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: -2px -1px 121px 89px rgba(0, 0, 0, 0.5);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: grayscale(0);
+        box-shadow: -2px -1px 121px 89px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: -2px -1px 121px 89px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: -2px -1px 121px 89px rgba(0, 0, 0, 0.5);
+    }
+}

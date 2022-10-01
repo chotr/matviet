@@ -1,0 +1,98 @@
+.breadcrumbs {
+    margin-top: -0.5rem 0;
+
+    &-lst {
+        align-items: center;
+        // margin: 0 -1rem;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        // padding: 0 1rem;
+        position: relative;
+        padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+
+        &:nth-child(1) {
+            &::before {
+                display: none;
+            }
+        }
+
+        &:not(:last-child) {
+            padding-right: 2.9rem;
+
+            @include max(600px)  {
+                padding-right: 2.2rem;
+            }
+            
+
+            &::before {
+                position: absolute;
+                // content: url("../assets/images/chevron-right.svg");
+                content: "";
+                right: 0;
+                top: 0.3rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                @include mid-flex;
+                background-image: url("../assets/images/chevron-right.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+
+                // @include m
+
+                @include max(600px) {
+                    width: 1.8rem;
+                    height: 1.8rem; 
+                    top: 0.6rem;
+                }
+
+                @include max(400px) {
+                    top: 0.3rem;
+                }
+            }
+        }
+
+        a {
+            color: $color-text;
+            font-weight: 400;
+            @include fz-16;
+            line-height: 1.25;
+            text-transform: uppercase;
+
+            @media (max-width: 600px) {
+                font-size: 1.4rem;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &-section {
+        padding: 2rem 0;
+        background: #F2F2F2;
+    }
+}
+
+.back-page {
+    .icon {
+        margin-right: 0.7rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+
+        img {
+            width: 100%;
+            object-fit: contain
+        }
+    }
+
+    a {
+        @include flex;
+        align-items: center;
+    }
+}

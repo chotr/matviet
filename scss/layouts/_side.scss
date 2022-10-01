@@ -1,0 +1,133 @@
+.side {
+    &-fixed {
+        position: fixed;
+        width: auto;
+        max-width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1000;
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        transform: translateX(102%);
+        visibility: hidden;
+
+        &.open {
+            opacity: 1;
+            transform: translate(0, 0);
+            visibility: visible;
+        }
+
+        // @include max($res-mobile) {
+        // }
+        &-wrap {
+            padding: 4.6rem 5.8rem;
+            padding-right: 9.4rem;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            // @include max($res-mobile) {
+            // }
+
+            @include max(600px) {
+                padding: 3rem 1.5rem;
+            }
+        }
+    }
+
+    &-overlay {
+        position: fixed;
+        @include full;
+        background-color: rgba($color: $color-black, $alpha: 0.8);
+        z-index: 50;
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        // transform: translateX(110%);
+        visibility: hidden;
+        z-index: 999;
+
+        &.open {
+            opacity: 1;
+            // transform: translate(0, 0);
+            visibility: visible;
+        }
+
+        // @include min($res-mobile-min) {
+        //     display: none;
+        // }
+    }
+
+    &-open {
+        width: 4rem;
+        height: 4rem;
+        position: fixed;
+        right: 0;
+        @include posi-vertical;
+        z-index: 40;
+        background-color: $color-second;
+        @include mid-flex;
+        border-radius: 100rem 0 0 100rem;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+
+        &.close {
+            opacity: 0;
+            transform: translate(100%, -50%);
+            visibility: visible;
+        }
+
+        // @include min($res-mobile-min) {
+        //     display: none;
+        // }
+        &-wrap {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100rem;
+            background-color: white;
+            @include mid-flex;
+
+            .icon {
+                color: $color-second;
+                font-weight: 600;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        // border: 1px solid $color-pri;
+        @include mid-flex;
+        cursor: pointer;
+
+        &:hover {
+            .icon {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon {
+            font-size: 1.8rem;
+            font-weight: 900;
+            transition: 0.6s ease-in-out;
+        }
+
+        // @include min($res-mobile-min) {
+        //     display: none;
+        // }
+    }
+
+    &-filter {
+        max-width: 47rem;
+
+        @include max(420px) {
+            width: 100vw;
+        }
+    }
+}

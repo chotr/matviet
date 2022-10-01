@@ -1,0 +1,55 @@
+.hamburger {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-block;
+    margin-left: 1.1rem;
+
+    @include max(1300px) {
+        margin: 0;
+    }
+    .icon {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        // background: black;
+        @include mid-flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+        span {
+            height: 4px;
+            display: inline-block;
+            background: $color-text;
+            margin-left: auto;
+            border-radius: 4px;
+
+            &:nth-child(1) {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: 85%;
+                margin-top: 9px;
+                margin-bottom: 9px;
+            }
+
+            &:nth-child(3) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.toggle {
+    @include flex;
+    align-items: center;
+    
+
+    .text {
+        font-weight: 500;
+        line-height: 1.25;
+    }
+}
