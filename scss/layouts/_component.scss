@@ -380,14 +380,11 @@
         overflow: hidden;
         @include mid-flex;
         -webkit-mask-image: -webkit-radial-gradient(white, black);
-<<<<<<< HEAD
-=======
 
         @include max(400px) {
             padding: 1.4rem 2rem 1.3rem;
         }
 
->>>>>>> c97842f (chi tiet)
     }
     &.trans {
         background-color: transparent;
@@ -542,8 +539,6 @@
                 &:hover {}
             }
         }
-<<<<<<< HEAD
-=======
 
         &-cl-second {
             &::before {
@@ -551,7 +546,6 @@
             }
         }
         
->>>>>>> c97842f (chi tiet)
     }
     &.arrow {
         .btn-inner {
@@ -573,8 +567,6 @@
             font-size: 1.6rem;
         }
     }
-<<<<<<< HEAD
-=======
 
     &.t-white {
 
@@ -592,9 +584,6 @@
             border: 0.2rem solid $color-pri;
         }
     }
-
-
->>>>>>> c97842f (chi tiet)
 }
 
 // background fade   

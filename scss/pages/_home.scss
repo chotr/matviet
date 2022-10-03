@@ -465,6 +465,12 @@
         color: #FDD836;
         padding: 0 0.5rem;
         @include fz-20;
+
+    }
+    &-item {
+        &:not(:last-child) {
+            margin-right: 0.6rem;
+        }
     }
 }
 

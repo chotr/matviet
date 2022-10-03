@@ -66,4 +66,23 @@ export default function PopupModule() {
     })
   }
 
+  const btnRv = document.querySelector(".reviews-wrap .btn")
+  const puRV = document.querySelector(".popup-reviews")
+  if (btnRv && puRV) {
+    puRV.querySelector(".ti-close.icon").addEventListener("click",() => {
+      puRV.classList.remove("open");
+      document.body.style.overflow = "auto"
+    })
+
+    puRV.querySelector(".popup-overlay").addEventListener("click",() => {
+      puRV.classList.remove("open");
+      document.body.style.overflow = "auto"
+    })
+
+    btnRv.addEventListener("click", (e) => {
+      e.preventDefault();
+      puRV.classList.add("open");
+      document.body.style.overflow = "hidden"
+    })
+  }
 }

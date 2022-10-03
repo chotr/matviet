@@ -378,4 +378,60 @@ export default function SwiperModule() {
       });
     });
   }
+
+  const glassesSl = document.querySelector(".glasses-slide .swiper-container")
+
+  if (glassesSl) {
+    var swiper2 = new Swiper(glassesSl, {
+      spaceBetween: 0,
+      speed: 1000,
+      slidesPerView: 5,
+      loop: true,
+      centeredSlides: true,
+      on: {
+        slideChange: function (realIndex) {
+          var activeIndex = this.activeIndex;
+          var realIndex = this.slides
+            .eq(activeIndex)
+            .attr("data-swiper-slide-index");
+          $(".glasses-slide .swiper-slide").removeClass("my-active");
+          $(
+            '.glasses-slide .swiper-slide[data-swiper-slide-index="' +
+              realIndex +
+              '"]'
+          ).addClass("my-active");
+          $(".glasses-slide .swiper-slide").removeClass("my-active-1");
+          $(".glasses-slide .my-active").next().addClass("my-active-1");
+
+          $(".glasses-slide .swiper-slide").removeClass("my-active-2");
+          $(".glasses-slide .my-active").next().next().addClass("my-active-2");
+
+          $(".glasses-slide .swiper-slide").removeClass("my-active-2-1");
+          $(".glasses-slide .my-active").next().next().next().addClass("my-active-2-1");
+
+
+          $(".glasses-slide .swiper-slide").removeClass("my-active-3");
+          $(".glasses-slide .my-active").prev().addClass("my-active-3");
+
+          $(".glasses-slide .swiper-slide").removeClass("my-active-4");
+          $(".glasses-slide .my-active").prev().prev().addClass("my-active-4");
+        },
+      },
+     
+    });
+
+    var swiper1 = new Swiper(".glasses-slide-content .swiper-container", {
+      spaceBetween: 10,
+      speed: 1000,
+      slidesPerView: 1,
+      loop: true,
+      centeredSlides: true,
+      thumbs: {
+        swiper: swiper2
+      }
+     
+    });
+    // swiper2.controller.control = swiper1;
+    // swiper1.controller.control = swiper2;
+  }
 }

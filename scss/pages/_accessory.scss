@@ -17,12 +17,12 @@
             @include max(1025px) {
                 width: 100%;
                 padding: 0 3rem;
-            } 
+            }
         }
 
         .top {
             .filter-container {
-                @include max(450px){
+                @include max(450px) {
                     width: 100%;
                     margin-top: 1.5rem;
                 }
@@ -168,6 +168,15 @@
     }
 
     &-list {
+        @include min(1201px) {
+            display: -webkit-flex !important;
+            display: -moz-flex !important;
+            display: -ms-flex !important;
+            display: -o-flex !important;
+            display: flex !important;
+
+        }
+
         @include max(1201px) {
             flex-direction: column;
             position: absolute;
@@ -184,7 +193,9 @@
     }
 
     &-item {
-        a {
+
+        a,
+        .sort-detail {
             @include flex;
             align-items: center;
             padding: 0.9rem 3.2rem 0.8rem;
@@ -193,6 +204,7 @@
             min-width: 16.5rem;
             @include mid-flex;
             width: max-content;
+            cursor: pointer;
         }
 
         .icon {
@@ -205,7 +217,9 @@
         }
 
         &.current {
-            a {
+
+            a,
+            .sort-detail {
                 background: $color-text;
                 color: white;
 
@@ -218,7 +232,9 @@
         }
 
         &.other {
-            a {
+
+            a,
+            .sort-detail {
                 color: #CC4444;
 
                 @include max(1201px) {

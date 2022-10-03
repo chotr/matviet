@@ -45,5 +45,18 @@ export default function TabModule() {
         sortLst.querySelector(".sort-selected").addEventListener("click", () => {
             $(sortLst.querySelector(".sort-list")).slideToggle(300)
         })
+
+        sortLst.querySelector(".sort-selected").innerHTML = sortLst.querySelector(".sort-list .current .sort-detail").textContent +`<span class="icon"><i class="ti-angle-down"></i></span>` ;
+
+
+        sortLst.querySelectorAll(".sort-item").forEach((ele, i) => {
+            ele.addEventListener("click", () => {
+                sortLst.querySelectorAll(".sort-item").forEach((ele1, i) => {
+                    ele1.classList.remove("current")
+                })
+                sortLst.querySelector(".sort-selected").innerHTML = ele.querySelector(".sort-detail").textContent +`<span class="icon"><i class="ti-angle-down"></i></span>` ;
+                ele.classList.add("current")
+            })
+        })
     }
 }

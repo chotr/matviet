@@ -59,4 +59,11 @@ export default function SelectCusModule() {
             }
         });
     });
+
+    const reviewssort = document.querySelector(".reviews-sort");
+    if (reviewssort) {
+        reviewssort.querySelector(".title").addEventListener("click", () => {
+            $(reviewssort.querySelector(".sort-rv-list")).stop().slideToggle(300)
+        })
+    }
 }

@@ -29,4 +29,5 @@ export default function LetterModule() {
             }, 1200)
         })
     }
+   
 }

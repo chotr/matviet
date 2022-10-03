@@ -219,6 +219,14 @@
         flex: 1;
         padding-left: 3.5rem;
 
+        @include max(1201px) {
+            width: 100%;
+            padding-left: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid $color-CECECE;
+        }
+
         &-content {
             position: sticky;
             top: 10rem;
@@ -227,6 +235,10 @@
         .image {
             border-radius: 2.4rem;
             overflow: hidden;
+
+            @include max(1201px) {
+                width: 45%;
+            }
         }
     }
 
@@ -245,39 +257,70 @@
             &-wrap {
                 border-bottom: 1px solid $color-CECECE;
                 padding-bottom: 6rem;
+
+                @include max(1201px) {
+                    flex-direction: column-reverse;
+                }
             }
 
             &-content {
                 &-info {
                     width: calc(100% * 8 / 12);
+
+                    @include max(1201px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .show-hide-toggle {
+            margin-top: 4rem;
+            @include flex;
+            align-items: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            color: $color-pri;
+
+            .icon-dr {
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-left: 0.8rem;
+                @include mid-flex;
+
+                i {
+                    font-size: 1.2rem;
+                    font-weight: 900;
                 }
             }
         }
 
         .tab {
             &-lst {
-                padding-bottom: 1rem;
-                margin: 0 -1.2rem;
+                margin: -0.5rem -1.2rem;
+                flex-wrap: wrap;
             }
 
             &-item {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                
                 .text {
-                    padding: 1.5rem 1.5rem 1.4rem;
+                    padding: 0.9rem 1.6rem;
                 }
             }
 
             &-content {
-                padding-top: 1.5rem;
-
-                .content {
-                    margin: -1rem 0;
-
-                    p,
-                    img {
-                        margin: 1rem 0;
+                &-item {
+                    padding-top: 2.5rem;
+                    .content {
+                        margin: -1rem 0;
                     }
 
-                    .image {}
+                    p {
+                        margin: 1rem 0;
+                    }
                 }
             }
         }
@@ -491,6 +534,7 @@
 
 .eyecare {
     padding: 0;
+    overflow: hidden;
 
     .box {
         &-item {

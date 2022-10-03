@@ -1144,8 +1144,8 @@
                             </ul>
 
                             <div class="tab-content pos-relative overflow-hidden">
-                                <div class="tab-content-item active">
-                                    <div class="content">
+                                <div class="tab-content-item active show-hide-block" data-show-hide-number="10" data-show-hide-show-text="Xem thêm" data-show-hide-hide-text="Thu gọn">
+                                    <div class="content show-hide-content">
                                         <p>Gọng Kính Râm Cận Ultem TJ013 C3 mắt bạc là dòng sản phẩm gọng kính 2in1 đa
                                             năng, mang đến trải nghiệm mới lạ cho người sử dụng. TJ013 nổi bật với form
                                             dáng cứng cáp, gọng cận được thiết kế các đường bo góc hiện đại, thời
@@ -1163,9 +1163,11 @@
                                             rẻ nhưng rất chất lượng, phù hợp với cả nam và nữ. Tiện lợi, dễ tháo lắp.
                                         </p>
 
+
                                         <div class="image">
                                             <img src="./assets/images/menu-img-1.png" alt="">
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="tab-content-item">
@@ -2086,13 +2088,15 @@
         </div>
     </main>
 
-    <div class="popup popup-reviews open">
+    <div class="popup popup-reviews">
         <div class="popup-overlay">
         </div>
         <div class="popup-main">
             <div class="popup-over">
                 <div class="popup-wrapper">
-                    <div class="reviews-box flex flex-ai-center flex-jc-between">
+                    <h3 class="mb-20 f-gil fw-7 f-32 l-34 t-sp-1 text-center">Đánh giá sản phẩm (21)</h3>
+
+                    <div class="reviews-top flex flex-ai-center flex-jc-between">
                         <div class="reviews-score">
                             <div class="score mb-10">
                                 <span class="big fw-7 f-32 l-34 t-sp-1">5.0</span>
@@ -2120,7 +2124,7 @@
                             </div>
                         </div>
 
-                        <div class="reviews-sort">
+                        <div class="reviews-sort pos-relative">
                             <span class="title flex flex-ai-center">
                                 Sắp xếp theo: <span class="selected">Mới nhất </span>
 
@@ -2128,10 +2132,202 @@
                             </span>
 
                             <ul class="sort-rv-list">
-                                <li class="sort-rv-item">Mới nhất</li>
-                                <li class="sort-rv-item">Cao nhất</li>
-                                <li class="sort-rv-item">Thấp nhất</li>
+                                <li class="sort-rv-item current"><span class="icon"><i class="ti-check"></i></span> Mới nhất</li>
+                                <li class="sort-rv-item"><span class="icon"><i class="ti-check"></i></span> Cao nhất</li>
+                                <li class="sort-rv-item"><span class="icon"><i class="ti-check"></i></span> Thấp nhất</li>
                             </ul>
+                        </div>
+                    </div>
+
+                    <div class="reviews-list">
+                        <div class="reviews-item">
+                            <div class="reviews-box flex flex-ai-center flex-jc-between">
+                                <div class="reviews-user flex">
+                                    <div class="reviews-avatar">
+                                        <img src="./assets/images/avt-1.png" alt="">
+                                    </div>
+
+                                    <div class="info flex flex-column">
+                                        <span class="name">t***n****</span>
+                                        <span class="date-post">13-09-2022</span>
+                                    </div>
+                                </div>
+                                <div class="rating flex flex-ai-center">
+                                    <ul class="rating-list flex">
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="reviews-content mb-24">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed nunc
+                                    ullamcorper diam sollicitudin aliquam nec neque, odio. Varius malesuada
+                                    pulvinar egestas augue egestas a, sed. Augue platea iaculis rhoncus,
+                                    scelerisque sed nec aliquam. Id purus tincidunt massa eu iaculis sed.
+                                </p>
+                            </div>
+                            <div class="reviews-image-list flex flex-wrap">
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro1.png">
+                                        <img src="./assets/images/pro1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro2.png">
+                                        <img src="./assets/images/pro2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro3.png">
+                                        <img src="./assets/images/pro3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro4.png">
+                                        <img src="./assets/images/pro4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                            <div class="reviews-box flex flex-ai-center flex-jc-between">
+                                <div class="reviews-user flex">
+                                    <div class="reviews-avatar">
+                                        <img src="./assets/images/avt-1.png" alt="">
+                                    </div>
+
+                                    <div class="info flex flex-column">
+                                        <span class="name">t***n****</span>
+                                        <span class="date-post">13-09-2022</span>
+                                    </div>
+                                </div>
+                                <div class="rating flex flex-ai-center">
+                                    <ul class="rating-list flex">
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="reviews-content mb-24">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed nunc
+                                    ullamcorper diam sollicitudin aliquam nec neque, odio. Varius malesuada
+                                    pulvinar egestas augue egestas a, sed. Augue platea iaculis rhoncus,
+                                    scelerisque sed nec aliquam. Id purus tincidunt massa eu iaculis sed.
+                                </p>
+                            </div>
+                            <div class="reviews-image-list flex flex-wrap">
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro1.png">
+                                        <img src="./assets/images/pro1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro2.png">
+                                        <img src="./assets/images/pro2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro3.png">
+                                        <img src="./assets/images/pro3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro4.png">
+                                        <img src="./assets/images/pro4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                            <div class="reviews-box flex flex-ai-center flex-jc-between">
+                                <div class="reviews-user flex">
+                                    <div class="reviews-avatar">
+                                        <img src="./assets/images/avt-1.png" alt="">
+                                    </div>
+
+                                    <div class="info flex flex-column">
+                                        <span class="name">t***n****</span>
+                                        <span class="date-post">13-09-2022</span>
+                                    </div>
+                                </div>
+                                <div class="rating flex flex-ai-center">
+                                    <ul class="rating-list flex">
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                        <li class="rating-item flex">
+                                            <img src="./assets/images/Star.svg" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="reviews-content mb-24">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed nunc
+                                    ullamcorper diam sollicitudin aliquam nec neque, odio. Varius malesuada
+                                    pulvinar egestas augue egestas a, sed. Augue platea iaculis rhoncus,
+                                    scelerisque sed nec aliquam. Id purus tincidunt massa eu iaculis sed.
+                                </p>
+                            </div>
+                            <div class="reviews-image-list flex flex-wrap">
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro1.png">
+                                        <img src="./assets/images/pro1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro2.png">
+                                        <img src="./assets/images/pro2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro3.png">
+                                        <img src="./assets/images/pro3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="reviews-image">
+                                    <div class="image" data-src="./assets/images/pro4.png">
+                                        <img src="./assets/images/pro4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

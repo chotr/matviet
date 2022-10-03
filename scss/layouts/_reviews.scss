@@ -7,11 +7,21 @@
         overflow: hidden;
         padding: 2.5rem;
 
+        @include max(600px) {
+            flex-direction: column;
+            padding: 1rem;
+        }
+
         &-list {
             flex: 1;
             padding-left: 1.5rem;
             padding-right: 4rem;
             margin: -0.6rem -1rem;
+
+            @include max(1200px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
 
         &-item {
@@ -41,6 +51,11 @@
 
     &-score {
         width: calc(100% * 2 / 8);
+
+        @include max(600px) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
 
         .score {
             color: $color-CC4444;
@@ -78,14 +93,14 @@
 
     &-image {
         padding: 0 0.5rem;
-        width: 7rem;
-        height: 7rem;
         cursor: pointer;
 
         .image {
             background: #eeeeee;
-            width: 100%;
-            height: 100%;
+            width: 7rem;
+            height: 7rem;
+            border-radius: 0.6rem;
+            overflow: hidden;
         }
 
         &-list {
@@ -185,6 +200,15 @@
                     margin-right: 0.7rem;
                 }
             }
+
+            .btn {
+                &-inner {
+                    padding: 1.1rem 3.2rem 1rem;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    line-height: 1.28;
+                }
+            }
         }
 
         .btn {
@@ -222,6 +246,16 @@
                 color: #858585;
             }
         }
+
+        .stars {
+            &-item {
+                filter: grayscale(1);
+
+                &:not(:last-child) {
+                    margin-right: 0.6rem;
+                }
+            }
+        }
     }
 
     &-sort {
@@ -243,8 +277,64 @@
             }
         }
     }
+
+    &-top {
+        border-bottom: 1px solid $color-CECECE;
+        padding-bottom: 2rem;
+    }
 }
 
-// .sort- {
+.sort {
+    &-rv {
+        &-list {
+            display: none;
+            background: #FFFFFF;
+            border: 1px solid #E6E1E1;
+            border-radius: 2.4rem;
+            padding: 2.6rem 0 1rem;
+            margin-top: 0.6rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
 
-// }
+        &-item {
+            @include flex;
+            align-items: center;
+            padding: 0.7rem 1.4rem;
+
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 22px;
+            color: $color-7A7A7A;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                @include min(1201px) {
+                    background: #FFF4CA;
+                    color: $color-CC4444;
+                }
+            }
+
+            .icon {
+                @include mid-flex;
+                width: 1.6rem;
+                height: 1.6rem;
+                font-size: 1.2rem;
+                margin-right: 1.6rem;
+                opacity: 0;
+            }
+
+            &.current {
+                background: #FFF4CA;
+                color: $color-CC4444;
+
+                .icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
