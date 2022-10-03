@@ -7,15 +7,20 @@
 }
 
 .f {
+    &-gr {
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
+    }
     &-list {
         @include flex-st;
         flex-wrap: wrap;
-        margin: 0 -0.5rem;
-        margin-bottom: -1rem;
+        margin: 0 -1.2rem;
+        margin-bottom: -2.4rem;
     }
     &-item {
-        padding: 0 0.5rem;
-        margin-bottom: 1rem;
+        padding: 0 1.2rem;
+        margin-bottom: 2.4rem;
         &-2 {
             width: calc(100% / 2);
             @include max($mobile) {
@@ -35,6 +40,39 @@
             width: calc(100% / 4);
         }
     }
+    &-rela {
+        position: relative;
+        .re-input {
+            padding: 1.6rem 3rem 1.6rem 0;
+        }
+    }
+    &-eye {
+        position: absolute;
+        @include posi-vertical;
+        right: 0.8rem;
+        @include mid-flex;
+        cursor: pointer;
+        &.active {
+            &::before {
+                opacity: 1;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            height: 1.8rem;
+            width: 1px;
+            background-color: #B0AFAF;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+        i {
+            font-size: 1.8rem;
+            color: #B0AFAF;
+            font-weight: 500;
+        }
+    }
 }
 
 .re {
@@ -45,10 +83,81 @@
         display: block;
     }
     &-input {
-        padding: 1.6rem;
         width: 100%;
         @include font-pri;
+        font-size: 1.6rem;
+        font-weight: 500;
         border: none;
         outline: none;
+        border-bottom: 1px solid #CACACA;
+        padding: 1.6rem 0;
+        background-color: transparent;
+        &:focus {
+            border-bottom: 1px solid #CACACA;
+        }
+        &::-webkit-input-placeholder {
+            color: #B0AFAF;
+            font-weight: 500;
+        }
+        &::-moz-input-placeholder {
+            color: #B0AFAF;
+            font-weight: 500;
+        }
+    }
+    &-date {
+        padding: 1.5rem 0;
+        position: relative;
+        border-bottom: 1px solid #CACACA;
+        .icon {
+            width: 2.2rem;
+            height: 2.2rem;
+            position: absolute;
+            @include posi-vertical;
+            right: 0;
+            z-index: -1;
+        }
+        &-place {
+            .text {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.turn {
+    label {
+        @include flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &-input:checked~.turn-dot {
+        &::before {
+            left: 12px;
+        }
+    }
+    &-dot {
+        width: 2.4rem;
+        height: 1.4rem;
+        border-radius: 100rem;
+        flex-shrink: 0;
+        background-color: #72C3D5;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 100rem;
+            background-color: white;
+            left: 3px;
+            top: -1px;
+            @include posi-vertical;
+            @include transitionRe;
+        }
+    }
+    &-text {
+        color: $color-black;
+        margin-left: 1.8rem;
     }
 }

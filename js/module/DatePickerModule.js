@@ -3,7 +3,7 @@ export default function DatePickerModule() {
     let tomorrow_after = new Date(new Date().valueOf() + 2000 * 3600 * 24);
     let today = new Date();
     const openTimePicker = document.querySelector(".openTimePicker.input");
-    $(".openTimePicker").daterangepicker({
+    $(".openTimePicker.text").daterangepicker({
         minDate: today,
         autoApply: true,
         autoUpdateInput: true,

@@ -61,7 +61,7 @@
     -webkit-justify-content: flex-start;
 }
 
-@mixin excerpt( $font-size: $paragraph-font-size, $line-height: 1.4, $lines-to-show: 3, $excerpt-bg: transparent) {
+@mixin excerpt($font-size: $paragraph-font-size, $line-height: 1.4, $lines-to-show: 3, $excerpt-bg: transparent) {
     background: $excerpt-bg;
     display: -webkit-box;
     font-size: 1.4;
@@ -223,7 +223,7 @@
 }
 
 @mixin font-pri {
-    font-family: "Roboto", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 @mixin hidden($x: 0, $y: 0) {

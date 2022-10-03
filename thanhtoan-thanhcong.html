@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/backdoor.css">
     <link rel="icon" type="image/png" href="./assets/images/mona.png" />
-    <title>Giỏ hàng</title>
+    <title>Thanh toán thành công</title>
 </head>
 
 <body>
@@ -830,357 +830,34 @@
                 </div>
             </div>
         </div>
-        <div class="cart ss-pd">
+        <div class="paym-sc">
+            <div class="paym-sc-br" data-aos="zoom-in">
+                <img src="./assets/images/paym-sc-br.png" alt="">
+            </div>
             <div class="container">
-                <div class="cart-wrapper">
-                    <div class="cart-step ss-mg-b">
-                        <div class="cart-step-list">
-                            <div class="cart-step-item active">
-                                <div class="cart-step-icon">
-                                    <img src="./assets/images/cart-step-icon-1.svg" alt="" class="icon">
-                                </div>
-                                <p class="cart-step-name">
-                                    Giỏ hàng
-                                </p>
-                            </div>
-                            <div class="cart-step-item">
-                                <div class="cart-step-icon">
-                                    <img src="./assets/images/cart-step-icon-2.svg" alt="" class="icon">
-                                </div>
-                                <p class="cart-step-name">
-                                    Thông tin giao hàng
-                                </p>
-                            </div>
-                            <div class="cart-step-item">
-                                <div class="cart-step-icon">
-                                    <img src="./assets/images/cart-step-icon-3.svg" alt="" class="icon">
-                                </div>
-                                <p class="cart-step-name">
-                                    Hoàn tất thanh toán
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-empty" style="display: none;">
-                        <div class="cart-empty-img">
-                            <img src="./assets/images/cart-empty-img.svg" alt="">
-                        </div>
-                        <p class="des">
-                            Giỏ hàng hiện chưa có sản phẩm, hãy bắt đầu trải nghiệm mua sắm cùng Mắt Việt bạn nhé.
-                        </p>
-                        <a href="" class="btn second no-mw">
-                            <span class="btn-inner">Bắt đầu mua sắm</span>
-                        </a>
-                    </div>
-                    <div class="c-table mb-48">
-                        <p class="cart-title">
-                            Giỏ hàng (<span>4</span> sản phẩm)
-                        </p>
-                        <div class="c">
-                            <div class="c-head">
-                                <div class="dmini c-row">
-                                    <div class="dmini-item c-col c-col-first">
-                                        <p class="c-title">
-                                            Xoá
-                                        </p>
-                                    </div>
-                                    <div class="dmini-item c-col c-col-second">
-                                        <p class="c-title">
-                                            Hình ảnh
-                                        </p>
-                                    </div>
-                                    <div class="dmini-item c-col c-col-third">
-                                        <p class="c-title">
-                                            Sản phẩm
-                                        </p>
-                                    </div>
-                                    <div class="dmini-item c-col c-col-four">
-                                        <p class="c-title">
-                                            Số lượng
-                                        </p>
-                                    </div>
-                                    <div class="dmini-item c-col c-col-five">
-                                        <p class="c-title">
-                                            Đơn giá
-                                        </p>
-                                    </div>
-                                    <div class="dmini-item c-col c-col-six">
-                                        <p class="c-title">
-                                            Tổng tiền
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-body">
-                                <div class="c-item">
-                                    <div class="dmini c-row">
-                                        <div class="dmini-item c-col c-col-first">
-                                            <div class="c-delete">
-                                                <img src="./assets/images/icon-delete.svg" alt="" class="icon">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-second">
-                                            <div class="c-product">
-                                                <img src="./assets/images/c-product.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-third">
-                                            <div class="c-name">
-                                                Macro Melodi
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-four">
-                                            <div class="count">
-                                                <div class="count-btn count-minus">
-                                                    <i class="fas fa-minus icon"></i>
-                                                </div>
-                                                <input type="text" value="1" max="12" min="0" class="count-input" hidden>
-                                                <p class="count-number"></p>
-                                                <div class="count-btn count-plus">
-                                                    <i class="fas fa-plus icon"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-five">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                                <p class="price old">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-six">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-item">
-                                    <div class="dmini c-row">
-                                        <div class="dmini-item c-col c-col-first">
-                                            <div class="c-delete">
-                                                <img src="./assets/images/icon-delete.svg" alt="" class="icon">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-second">
-                                            <div class="c-product">
-                                                <img src="./assets/images/c-product.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-third">
-                                            <div class="c-name">
-                                                Macro Melodi
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-four">
-                                            <div class="count">
-                                                <div class="count-btn count-minus">
-                                                    <i class="fas fa-minus icon"></i>
-                                                </div>
-                                                <input type="text" value="1" max="12" min="0" class="count-input" hidden>
-                                                <p class="count-number"></p>
-                                                <div class="count-btn count-plus">
-                                                    <i class="fas fa-plus icon"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-five">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                                <p class="price old">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-six">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-item">
-                                    <div class="dmini c-row">
-                                        <div class="dmini-item c-col c-col-first">
-                                            <div class="c-delete">
-                                                <img src="./assets/images/icon-delete.svg" alt="" class="icon">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-second">
-                                            <div class="c-product">
-                                                <img src="./assets/images/c-product.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-third">
-                                            <div class="c-name">
-                                                Macro Melodi
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-four">
-                                            <div class="count">
-                                                <div class="count-btn count-minus">
-                                                    <i class="fas fa-minus icon"></i>
-                                                </div>
-                                                <input type="text" value="1" max="12" min="0" class="count-input" hidden>
-                                                <p class="count-number"></p>
-                                                <div class="count-btn count-plus">
-                                                    <i class="fas fa-plus icon"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-five">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                                <p class="price old">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-six">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-item">
-                                    <div class="dmini c-row">
-                                        <div class="dmini-item c-col c-col-first">
-                                            <div class="c-delete">
-                                                <img src="./assets/images/icon-delete.svg" alt="" class="icon">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-second">
-                                            <div class="c-product">
-                                                <img src="./assets/images/c-product.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-third">
-                                            <div class="c-name">
-                                                Macro Melodi
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-four">
-                                            <div class="count">
-                                                <div class="count-btn count-minus">
-                                                    <i class="fas fa-minus icon"></i>
-                                                </div>
-                                                <input type="text" value="1" max="12" min="0" class="count-input" hidden>
-                                                <p class="count-number"></p>
-                                                <div class="count-btn count-plus">
-                                                    <i class="fas fa-plus icon"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-five">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                                <p class="price old">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="dmini-item c-col c-col-six">
-                                            <div class="c-price">
-                                                <p class="price">
-                                                    1.700.000
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="btn icon right no-mw m-end m-top flex">
-                            <span class="btn-inner">
-                                Mua sắm thêm
-                                <span class="icon">
-                                    <img src="./assets/images/in-icon.png" alt="">
+                <div class="paym-sc-wrapper">
+                    <p class="t-title mb-20" data-aos="flip-left">
+                        Mua hàng thành công
+                    </p>
+                    <p class="paym-sc-des" data-aos="fade-up-cus">
+                        Đơn hàng của bạn đã hoàn thành, số hoá đơn <span class="paym-sc-code">
+                            #3442353454
+                        </span>
+                    </p>
+                    <div class="deli-form-control" data-aos="fade-up-cus">
+                        <div class="deli-form-control-item">
+                            <a href="" class="btn trans">
+                                <span class="btn-inner">
+                                    Lịch sử đơn hàng
                                 </span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="dnor cart-side">
-                        <div class="dnor-item cart-side-left">
-                            <div class="code-form">
-                                <form action="">
-                                    <label for="" class="re-label">
-                                        Mã ưu đãi
-                                    </label>
-                                    <div class="code-form-fl">
-                                        <div class="f-rela">
-                                            <input type="text" class="re-input" placeholder="Nhập mã khuyến mãi">
-                                            <img src="./assets/images/icon-percen.svg" alt="" class="icon-percen">
-                                        </div>
-                                        <button type="submit" class="btn no-mw">
-                                            <span class="btn-inner">Áp dụng</span>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+                            </a>
                         </div>
-                        <div class="dnor-item cart-side-right">
-                            <div class="bill">
-                                <div class="bill-wrapper">
-                                    <p class="bill-title">
-                                        Tổng thanh toán
-                                    </p>
-                                    <div class="bill-block">
-                                        <div class="bill-fl">
-                                            <p class="bill-text">
-                                                Tạm tính
-                                            </p>
-                                            <p class="bill-text">
-                                                4.500.000
-                                            </p>
-                                        </div>
-                                        <div class="bill-fl">
-                                            <p class="bill-text">
-                                                Phí vận chuyển
-                                            </p>
-                                            <p class="bill-text">
-                                                20.000
-                                            </p>
-                                        </div>
-                                        <div class="bill-fl">
-                                            <p class="bill-text">
-                                                Giảm giá
-                                            </p>
-                                            <p class="bill-text">
-                                                0
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="bill-bottom">
-                                        <div class="bill-fl">
-                                            <p class="bill-total-text">
-                                                Thanh toán
-                                            </p>
-                                            <p class="bill-total-text">
-                                                4.520.000
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn second no-mw reverse">
-                                    <span class="btn-inner">Tiếp tục thanh toán</span>
-                                </div>
-                            </div>
+                        <div class="deli-form-control-item">
+                            <a href="" class="btn">
+                                <span class="btn-inner">
+                                    Tiếp tục mua sắm
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
