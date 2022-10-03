@@ -1,6 +1,24 @@
 .product {
     &-item {
         margin-bottom: 5rem;
+        order: 5;
+
+        &:first-child {
+                
+            order: 1;
+        }
+
+        &:nth-child(2) {
+            order: 2;
+        }
+
+        &:nth-child(3) {
+            order: 3;
+
+            @include max(800px) {
+                order: 5;
+            }
+        }
 
         .img {
             &-main {
@@ -49,10 +67,27 @@
 
                 .img {
                     @include imgPd(1, 1);
+                    background: #eeeeee;
+                    overflow: hidden;
+                    border-radius: 0.6rem;
+                    border: 0.2rem solid transparent;
+                    transition: all 0.3s;
                 }
 
                 img {
                     @include imgContain;
+                }
+
+                .swiper {
+                    &-slide {
+                        &-thumb {
+                            &-active {
+                                .img {
+                                    border-color: $color-72C3D5;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -291,6 +326,11 @@
                 position: absolute;
                 width: 100%;
                 @include flex;
+
+                @include max(400px) {
+                    width: calc(100% + 12rem);
+                    left: -6rem;
+                }
             }
 
         }
@@ -298,12 +338,31 @@
         &.feature-content {
             width: calc(100% * 2 / 3) !important;
 
+            @include max(1024px) {
+                width: 100% !important;
+                order: 4;
+            }
+
+            @include max(800px) {
+                order: 3;
+            }
+
             .wrap-item {
                 height: 100%;
                 background: $color-8384AE;
                 border-radius: 2.4rem;
                 overflow: hidden;
                 position: relative;
+
+                @include max(1024px) {
+                    padding: 2rem 0;
+                }
+            }
+
+            .wrap-content {
+                @include max(600px) {
+                    flex-direction: column;
+                }
             }
 
             .swiper {
@@ -317,21 +376,39 @@
                     color: white;
                     user-select: none;
 
+                    @include max(800px) {
+                        padding: 1.5rem  3rem;
+                    }
+
+                    @include max(400px) {
+                        padding: 1.5rem;
+                    }
+
                     .image {
                         width: 22.6rem;
                         flex-shrink: 0;
                         position: relative;
+
+                        @include max(1024px) {
+                            width: 20rem;
+                        }
+
+                        @include max(800px) {
+                            width: 18rem;
+                        }
 
 
                         .img {
                             width: 100%;
                             height: 100%;
                             position: absolute;
-                            // position: relative;
-                            // @include imgPd(1,1);
                             top: 0;
                             left: 0;
                             right: 0;
+
+                            @include max(600px) {
+                                position: static;
+                            }
 
                             .outer {
                                 position: relative;
@@ -350,7 +427,19 @@
 
                     .info {
                         padding-right: 4.5rem;
+                        min-height: 20rem;
+
+                        @include max(800px) {
+                            padding-right: 1.5rem;
+                        }
+
+                        @include max(600px) {
+                            min-height: auto;
+                            margin-bottom: 1rem;
+                        }
                     }
+
+                   
                 }
 
                 &-container {
@@ -360,6 +449,10 @@
                 &-pagination {
                     right: 4rem;
                     left: auto;
+
+                    @include max(800px) {
+                        right: 1rem;
+                    }
                 }
             }
         }

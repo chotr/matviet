@@ -1,7 +1,7 @@
 export default function gallery() {
-    $('.image-slide').each(function () {
+    $('.reviews-image-list').each(function () {
       const $this = $(this);
-      const $item = $this.find('.gItem');
+      const $item = $this.find('.image');
       $(function () {
         $this.lightGallery({
           selector: $item,
@@ -16,5 +16,7 @@ export default function gallery() {
     //   thumbnail: true,
     //       zoom: true,
     // });
+
+    const cmtImg = document.querySelectorAll(".reviews-image-list")
   }
   

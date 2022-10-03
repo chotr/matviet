@@ -28,19 +28,17 @@
             top: 0;
             left: 0;
             // transform:
-            width: 0;
+            // width: 0;
             // overflow: hidden;
             transition: all 0.5s;
-            transform: translateX(100%);
-            transform-origin: -100%;
+            transform: translateY(100%);
 
             &.active {
                 position: relative;
                 visibility: visible;
                 opacity: 1;
-                width: auto;
-                transform: translateX(0%);
-                transform-origin: -100%;
+                // width: auto;
+                transform: translateY(0%);
             }
         }
     }

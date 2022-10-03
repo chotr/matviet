@@ -135,12 +135,18 @@ export default function SwiperModule() {
   if (prSL) {
     var prsw = new Swiper(prSL.querySelector(".all"), {
       speed: 1000,
-      slidesPerView: 3,
+      slidesPerView: 2,
       loop: true,
       navigation: {
         nextEl: prSL.querySelector(".for-u.next"),
         prevEl: prSL.querySelector(".for-u.prev"),
       },
+
+      breakpoints: {
+        800: {
+          slidesPerView: 3,
+        }
+      }
     });
   }
 
@@ -154,13 +160,11 @@ export default function SwiperModule() {
       var imgThumbs = new Swiper(thumbs, {
         spaceBetween: 25,
         speed: 1000,
-        loop: true,
         slidesPerView: 5,
       });
 
       var mainImg = new Swiper(main, {
         spaceBetween: 10,
-        loop: true,
         speed: 1000,
         slidesPerView: 1,
         thumbs: {
@@ -313,7 +317,7 @@ export default function SwiperModule() {
 
   if (prMain && prThums) {
     var thumbs = new Swiper(prThums.querySelector(".swiper-container"), {
-      direction: "vertical",
+      direction: "horizontal",
       mousewheel: {
         forceToAxis: true,
         sensitivity: 1,
@@ -322,9 +326,6 @@ export default function SwiperModule() {
       watchSlidesProgress: false,
       slidesPerView: 4,
       speed: 1000,
-      autoplay: {
-        delay: 5000,
-      },
       spaceBetween: 15,
       pagination: {
         el: ".comment-slide .swiper-pagination",
@@ -334,12 +335,16 @@ export default function SwiperModule() {
         el: prThums.querySelector(".swiper-pagination"),
         type: "progressbar",
       },
+      breakpoints: {
+        1201: {
+          direction: "vertical",
+        }
+      }
     });
 
     var swiper = new Swiper(prMain.querySelector(".swiper-container"), {
       spaceBetween: 10,
       speed: 1000,
-      loop: true,
       slidesPerView: 1,
       thumbs: {
         swiper: thumbs,
@@ -353,8 +358,24 @@ export default function SwiperModule() {
     var swiper = new Swiper(colorSl.querySelector(".swiper-container"), {
       spaceBetween: 32,
       speed: 1000,
-      loop: true,
       slidesPerView: 4,
+      navigation: {
+        nextEl: colorSl.querySelector(".next"),
+        prevEl: colorSl.querySelector(".prev"),
+      },
+     
+    });
+
+    const listCl = colorSl.querySelectorAll(".swiper-slide");
+
+    listCl.forEach((ele, i) => {
+      ele.addEventListener("click", (e) => {
+        listCl.forEach((ele1, j) => {
+          ele1.classList.remove("cl-active")
+        });
+
+        ele.classList.add("cl-active")
+      });
     });
   }
 }

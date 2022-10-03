@@ -219,4 +219,18 @@
             top: 2.4rem;
         }
     }
+
+    &-reviews {
+        .reviews-box {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $color-CECECE;
+        }
+
+        .popup {
+            &-main {
+                width: 100%;
+                max-width: 120rem
+            }
+        }
+    }
 }
