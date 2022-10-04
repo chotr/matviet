@@ -4697,9 +4697,6 @@ iframe {
   padding: 8.4rem 1.5rem;
   background: #0E1D61;
 }
-.step-last {
-  display: none;
-}
 .step-last .step-content {
   padding: 2.7rem 6.8rem 3rem;
 }
@@ -4753,6 +4750,12 @@ iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.step-panel {
+  display: none;
+}
+.step-panel.open {
+  display: block;
 }
 
 .recheck-input:checked ~ .style-item .text {
