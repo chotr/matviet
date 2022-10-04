@@ -145,8 +145,8 @@ export default function SwiperModule() {
       breakpoints: {
         800: {
           slidesPerView: 3,
-        }
-      }
+        },
+      },
     });
   }
 
@@ -338,8 +338,8 @@ export default function SwiperModule() {
       breakpoints: {
         1201: {
           direction: "vertical",
-        }
-      }
+        },
+      },
     });
 
     var swiper = new Swiper(prMain.querySelector(".swiper-container"), {
@@ -363,7 +363,6 @@ export default function SwiperModule() {
         nextEl: colorSl.querySelector(".next"),
         prevEl: colorSl.querySelector(".prev"),
       },
-     
     });
 
     const listCl = colorSl.querySelectorAll(".swiper-slide");
@@ -371,15 +370,15 @@ export default function SwiperModule() {
     listCl.forEach((ele, i) => {
       ele.addEventListener("click", (e) => {
         listCl.forEach((ele1, j) => {
-          ele1.classList.remove("cl-active")
+          ele1.classList.remove("cl-active");
         });
 
-        ele.classList.add("cl-active")
+        ele.classList.add("cl-active");
       });
     });
   }
 
-  const glassesSl = document.querySelector(".glasses-slide .swiper-container")
+  const glassesSl = document.querySelector(".glasses-slide .swiper-container");
 
   if (glassesSl) {
     var swiper2 = new Swiper(glassesSl, {
@@ -407,8 +406,11 @@ export default function SwiperModule() {
           $(".glasses-slide .my-active").next().next().addClass("my-active-2");
 
           $(".glasses-slide .swiper-slide").removeClass("my-active-2-1");
-          $(".glasses-slide .my-active").next().next().next().addClass("my-active-2-1");
-
+          $(".glasses-slide .my-active")
+            .next()
+            .next()
+            .next()
+            .addClass("my-active-2-1");
 
           $(".glasses-slide .swiper-slide").removeClass("my-active-3");
           $(".glasses-slide .my-active").prev().addClass("my-active-3");
@@ -417,21 +419,44 @@ export default function SwiperModule() {
           $(".glasses-slide .my-active").prev().prev().addClass("my-active-4");
         },
       },
-     
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      slideToClickedSlide: true,
+      loopedSlides: 5,
     });
 
     var swiper1 = new Swiper(".glasses-slide-content .swiper-container", {
       spaceBetween: 10,
       speed: 1000,
       slidesPerView: 1,
+      loopedSlides: 5,
       loop: true,
       centeredSlides: true,
-      thumbs: {
-        swiper: swiper2
-      }
-     
+      pagination: {
+        el: ".glasses-slide-content .swiper-pagination",
+        clickable: true,
+      },
+      // effect: "fade",
     });
-    // swiper2.controller.control = swiper1;
-    // swiper1.controller.control = swiper2;
+
+    swiper2.controller.control = swiper1;
+    swiper1.controller.control = swiper2;
+  }
+
+  const glRelated = document.querySelector(".glasses-related .swiper-container")
+
+  if (glRelated) {
+    var swiper1 = new Swiper(glRelated, {
+      spaceBetween: 104,
+      speed: 1000,
+      slidesPerView: 3,
+      loop: true,
+      centeredSlides: true,
+      navigation: {
+        nextEl: glRelated.parentElement.querySelector(".next"),
+        prevEl: glRelated.parentElement.querySelector(".prev"),
+      },
+
+    });
   }
 }
