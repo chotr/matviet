@@ -3,11 +3,9 @@
     @include fz-56;
     line-height: 1.3;
     font-family: 'SVN-Gilroy';
-
     @include max(1200px) {
         font-size: 4.5rem;
     }
-
     @include max(800px) {
         font-size: 3.8rem;
     }
@@ -21,26 +19,19 @@
     line-height: 1.2;
     letter-spacing: 0.06em;
     font-family: 'SVN-Gilroy';
-
     &.white {
         color: white;
     }
-
     &.m-nor {
         margin-bottom: 2.4rem;
     }
 }
 
 .t-title-second {
-
-
-    &.m-mini {}
-
-    &.m-nor {
-        margin-bottom: 2.4rem;
-    }
-
-    &.m-large {}
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-text;
+    font-family: 'SVN-Gilroy', sans-serif;
 }
 
 .t-title-3 {}
@@ -49,96 +40,76 @@
 
 .t-title-5 {}
 
-
 .f {
     &-20 {
         @include fz-20;
-
         &.l {
             &-initial {
                 line-height: 1.2;
             }
-
             &-24 {
                 line-height: 1.2;
             }
-
             &-25 {
                 line-height: 1.25;
             }
-
             &-32 {
                 line-height: 1.6
             }
         }
     }
-
     &-16 {
         @include fz-16;
-
         &.l {
             &-20 {
                 line-height: 1.25;
             }
-
             &-24 {
                 line-height: 1.5;
             }
-
             &-26 {
                 line-height: 1.6;
             }
         }
     }
-
     &-14 {
         @include fz-14;
-
         &.l {
             &-18 {
                 line-height: 1.28;
             }
-
             &-22 {
                 line-height: 1.6
             }
         }
     }
-
     &-30 {
         @include fz-30;
-
         &.l {
             &-38 {
                 line-height: 1.26;
             }
         }
     }
-
     &-32 {
         @include fz-32;
-
         &.l {
             &-34 {
                 line-height: 1.2;
             }
-
             &-40 {
                 line-height: 1.25;
             }
         }
     }
-
     &-60 {
         @include fz-60;
-
         &.l {
             &-72 {
                 line-height: 1.2
             }
         }
     }
-
     &-gil {
         font-family: 'SVN-Gilroy';
     }
@@ -148,20 +119,16 @@
     &-white {
         color: white;
     }
-
     &-main {
         color: $color-pri;
     }
-
     &-18345F {
         color: $color-18345F;
     }
-
     &-line {
         position: relative;
         display: inline-block;
         margin: auto;
-
         &::before,
         &::after {
             position: absolute;
@@ -171,25 +138,20 @@
             background: $color-D2D0D0;
             top: 50%;
             transform: translateY(-50%);
-
         }
-
         &::before {
             right: calc(100% + 4rem);
         }
-
         &::after {
             left: calc(100% + 4rem);
         }
     }
-
     &-outline {
         &-1 {
             text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px black, 0 0 1px white, 0 0 1px white, 0 0 1px white;
             -webkit-font-smoothing: antialiased;
         }
     }
-
     &-sp {
         &-1 {
             letter-spacing: 0.06em;
@@ -202,7 +164,6 @@
         white-space: nowrap;
     }
 }
-
 
 .t-center {
     text-align: center;

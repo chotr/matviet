@@ -380,11 +380,9 @@
         overflow: hidden;
         @include mid-flex;
         -webkit-mask-image: -webkit-radial-gradient(white, black);
-
         @include max(400px) {
             padding: 1.4rem 2rem 1.3rem;
         }
-
     }
     &.trans {
         background-color: transparent;
@@ -511,6 +509,16 @@
             background: $color-pri;
         }
     }
+    &.four {
+        .btn-inner {
+            color: $color-pri;
+        }
+        &:hover {
+            .btn-inner {
+                color: white;
+            }
+        }
+    }
     &.icon {
         .btn-inner {
             @include flex;
@@ -521,7 +529,6 @@
             margin: -0.5rem 0;
             margin-right: 1rem;
             font-size: 2rem;
-
             @include max(320px) {
                 margin-right: 0.3rem;
             }
@@ -539,13 +546,11 @@
                 &:hover {}
             }
         }
-
         &-cl-second {
             &::before {
                 background: $color-72C3D5;
             }
         }
-        
     }
     &.arrow {
         .btn-inner {
@@ -567,18 +572,14 @@
             font-size: 1.6rem;
         }
     }
-
     &.t-white {
-
         .btn-inner {
             color: white;
-
             .text {
                 color: white;
             }
         }
     }
-
     &.bd-pri {
         .btn-inner {
             border: 0.2rem solid $color-pri;
@@ -778,17 +779,14 @@
     text-decoration-line: underline;
     color: $color-pri;
     width: fit-content;
-
     &-2 {
         width: fit-content;
-
         .icon {
             width: 1.6rem;
             height: 1.6rem;
             @include mid-flex;
             font-size: 1.2rem;
             margin-left: 0.8rem;
-
             i {
                 font-weight: 700;
             }
