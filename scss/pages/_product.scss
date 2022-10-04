@@ -469,6 +469,10 @@
     &-item {
         @include flex;
 
+        a {
+            @include flex;
+        }
+
         &:not(:last-child) {
             margin-right: 1rem;
         }

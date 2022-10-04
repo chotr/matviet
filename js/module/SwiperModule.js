@@ -352,28 +352,30 @@ export default function SwiperModule() {
     });
   }
 
-  const colorSl = document.querySelector(".color-content");
+  const colorSl = document.querySelectorAll(".color-content");
 
   if (colorSl) {
-    var swiper = new Swiper(colorSl.querySelector(".swiper-container"), {
-      spaceBetween: 32,
-      speed: 1000,
-      slidesPerView: 4,
-      navigation: {
-        nextEl: colorSl.querySelector(".next"),
-        prevEl: colorSl.querySelector(".prev"),
-      },
-    });
+    colorSl.forEach((ele, i) => {
+      var swiper = new Swiper(ele.querySelector(".swiper-container"), {
+        spaceBetween: 32,
+        speed: 1000,
+        slidesPerView: 4,
+        navigation: {
+          nextEl: ele.querySelector(".next"),
+          prevEl: ele.querySelector(".prev"),
+        },
+      });
 
-    const listCl = colorSl.querySelectorAll(".swiper-slide");
+      const listCl = ele.querySelectorAll(".swiper-slide");
 
-    listCl.forEach((ele, i) => {
-      ele.addEventListener("click", (e) => {
-        listCl.forEach((ele1, j) => {
-          ele1.classList.remove("cl-active");
+      listCl.forEach((elem, i) => {
+        elem.addEventListener("click", (e) => {
+          listCl.forEach((ele1, j) => {
+            ele1.classList.remove("cl-active");
+          });
+
+          elem.classList.add("cl-active");
         });
-
-        ele.classList.add("cl-active");
       });
     });
   }
@@ -443,7 +445,9 @@ export default function SwiperModule() {
     swiper1.controller.control = swiper2;
   }
 
-  const glRelated = document.querySelector(".glasses-related .swiper-container")
+  const glRelated = document.querySelector(
+    ".glasses-related .swiper-container"
+  );
 
   if (glRelated) {
     var swiper1 = new Swiper(glRelated, {
@@ -456,7 +460,6 @@ export default function SwiperModule() {
         nextEl: glRelated.parentElement.querySelector(".next"),
         prevEl: glRelated.parentElement.querySelector(".prev"),
       },
-
     });
   }
 }
