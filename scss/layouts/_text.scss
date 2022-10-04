@@ -9,6 +9,11 @@
     @include max(800px) {
         font-size: 3.8rem;
     }
+
+    &.t-2 {
+        font-weight: 700;
+        letter-spacing: 0.06em;
+    }
 }
 
 .t-title-xl {}
@@ -144,6 +149,30 @@
         }
         &::after {
             left: calc(100% + 4rem);
+        }
+
+        &.short {
+            margin-top: 0;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 6.6rem;
+                height: 0.1rem;
+                background: $color-pri;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+
+            &::before {
+                right: calc(100% + 0.9rem);
+            }
+    
+            &::after {
+                left: calc(100% + 0.9rem);
+            }
         }
     }
     &-outline {
