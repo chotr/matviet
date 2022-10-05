@@ -1,6 +1,6 @@
 export default function PopupModule() {
   $(document).ready(function () {
-    $(".vd-bg").magnificPopup({
+    $(".play-video").magnificPopup({
       // disableOn: 500,
       type: "iframe",
       mainClass: "mfp-fade",

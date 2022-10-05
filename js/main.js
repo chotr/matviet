@@ -30,7 +30,11 @@ import BannerModule from "./module/BannerModule.js";
 import RangePriceModule from "./module/RangePriceModule.js";
 import ChangeTypeInputModule from "./module/ChangeTypeInputModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
+<<<<<<< HEAD
 import StepsModule from "./module/StepsModule.js";
+=======
+import Amount from "./module/amount.js";
+>>>>>>> 4f673e5 (new)
 
 window.addEventListener("DOMContentLoaded", () => {
     MobileModule();
@@ -66,5 +70,9 @@ window.addEventListener("DOMContentLoaded", () => {
     RangePriceModule();
     ChangeTypeInputModule();
     DatePickerModule();
+<<<<<<< HEAD
     StepsModule();
+=======
+    Amount()
+>>>>>>> 4f673e5 (new)
 });

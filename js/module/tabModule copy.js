@@ -15,8 +15,6 @@ export default function tabModule() {
   if (tabL.length > 0) {
     tabL.forEach((el, k) => {
       const lstTab = el.querySelectorAll(".tab-item ");
-      console.log(lstTab)
-
       if (tabContent.length > 0) {
         const tabContentLst =
           tabContent[k].querySelectorAll(".tab-content-item");
