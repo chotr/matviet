@@ -489,4 +489,36 @@ export default function SwiperModule() {
             }
         }
     });
+<<<<<<< HEAD
 }
+=======
+  }
+
+  const svSl = document.querySelector(
+    ".services-list .swiper-container"
+  );
+
+  if (svSl) {
+    var swiper1 = new Swiper(svSl, {
+      spaceBetween: 0,
+      speed: 1000,
+      slidesPerView: 1,
+      // navigation: {
+      //   nextEl: glRelated.parentElement.querySelector(".next"),
+      //   prevEl: glRelated.parentElement.querySelector(".prev"),
+      // },
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+        850: {
+          slidesPerView: 3,
+        },
+        1201: {
+          slidesPerView: 4,
+        }
+      }
+    });
+  }
+}
+>>>>>>> fbbfabf (about)

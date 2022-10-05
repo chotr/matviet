@@ -2,9 +2,9 @@ export default function Amount() {
     const amountwwrap = document.querySelector(".product-info");
 
     if (amountwwrap) {
-        const decre = amountwwrap.querySelector(".decre")
-        const incre = amountwwrap.querySelector(".incre")
-        const num = amountwwrap.querySelector(".num input")
+        const decre = amountwwrap.querySelector(".minus")
+        const incre = amountwwrap.querySelector(".plus")
+        const num = amountwwrap.querySelector("input.amount")
         var event = new Event('change');
         decre.addEventListener("click", () => {
             if (num.value > 1) {
@@ -19,13 +19,13 @@ export default function Amount() {
         })
         num.addEventListener("change", (e) => {
             let lastValue = 0;
-            // if(/^[0-9]+$/.test(e.target.value)) {
-            //     lastValue = e.target.value;
-            // }
-            if(!/^[0-9]+$/.test(e.target.value)){
-                num.value = lastValue;
-                alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)");
-              }
+            // // if(/^[0-9]+$/.test(e.target.value)) {
+            // //     lastValue = e.target.value;
+            // // }
+            // if(!/^[0-9]+$/.test(e.target.value)){
+            //     num.value = lastValue;
+            //     alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)");
+            //   }
         })
     }
 }

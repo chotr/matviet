@@ -1,8 +1,10 @@
 .regi {
     overflow: hidden;
+
     &-wrapper {
         position: relative;
     }
+
     &-line {
         position: absolute;
         @include posi-horizontal;
@@ -10,9 +12,11 @@
         height: 100%;
         width: 1px;
         background-color: #CECECE;
+
         @include max(1000px) {
             display: none
         }
+
         &-text {
             @include mid;
             width: 5rem;
@@ -20,6 +24,7 @@
             border-radius: 100rem;
             @include mid-flex;
             background-color: #F9F9F9;
+
             span {
                 color: #CACACA;
                 font-size: 1.4rem;
@@ -27,46 +32,67 @@
             }
         }
     }
+
     &-list {
         margin-bottom: -6rem;
     }
+
     &-item {
         width: calc(100% /2);
         margin-bottom: 6rem;
+
         @include max(1000px) {
             width: 100%;
         }
     }
+
     &-action {
         @include flex;
         justify-content: space-between;
         margin-bottom: 3rem;
         flex-wrap: wrap;
+
         &-item {
             @include max($mobile) {
                 width: 100%;
             }
+
             &.current_page_item {
                 .regi-action-link {
                     color: $color-pri;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.active {
+                .regi-action-link {
+                    color: $color-pri;
+
                     &::before {
                         width: 100%;
                     }
                 }
             }
         }
+
         &-link {
             display: block;
             padding: 1rem;
             font-weight: 700;
             color: #B0AFAF;
             position: relative;
+
             &:hover {
                 color: $color-pri;
+
                 &::before {
                     width: 100%;
                 }
             }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -79,34 +105,50 @@
             }
         }
     }
+
     &-title {
         color: $color-text;
         font-weight: 700;
         font-size: 2rem;
         margin-bottom: 1.6rem;
     }
+
     &-form {
         margin-right: 6rem;
+
         @include max(1000px) {
             margin-right: 0;
         }
+
         .btn {
             margin-top: 3rem;
         }
+
+        .tabPanel {
+            display: none;
+
+            &.open {
+                display: block;
+            }
+        }
     }
+
     &-method {
         width: 70%;
         margin: 0 auto;
         height: 100%;
         @include mid-flex;
         flex-direction: column;
+
         @include max(1000px) {
             width: 50%;
         }
+
         @include max(600px) {
             width: 100%;
         }
     }
+
     &-btn {
         @include mid-flex;
         padding: 1.4rem;
@@ -114,40 +156,49 @@
         border-radius: 4rem;
         border: 1px solid $color-text;
         @include transitionRe;
+
         &:not(:last-child) {
             margin-bottom: 2.4rem;
         }
+
         &:hover {
             border: 1px solid $color-second;
+
             .text {
                 color: $color-pri;
             }
         }
+
         .icon {
             width: 3.2rem;
             height: 3.2rem;
             margin-right: 0.8rem;
         }
+
         .text {
             font-weight: 500;
             color: $color-text;
             @include transitionRe;
         }
     }
+
     &-popup {
         .popup-main {
             width: 60rem;
             box-shadow: 0px 10px 20px rgba(51, 51, 51, 0.1);
         }
+
         .popup-wrapper {
             border-radius: 2.4rem;
             @include flex;
             flex-direction: column;
         }
+
         &-noti {
             text-align: center;
             margin: auto 0;
             height: 100%;
+
             .icon {
                 width: 7rem;
                 height: 7rem;
@@ -156,16 +207,19 @@
                 margin-bottom: 2.4rem;
                 display: block;
             }
+
             &-title {
                 color: $color-pri;
                 font-size: 2rem;
                 font-weight: 700;
                 margin-bottom: 1.6rem;
             }
+
             .des {
                 color: $color-text;
                 font-weight: 500;
             }
+
             .btn {
                 margin-top: 2.4rem;
             }
