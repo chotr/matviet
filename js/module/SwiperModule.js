@@ -117,7 +117,6 @@ export default function SwiperModule() {
 
     const collectionSl = document.querySelector(".collection-slide");
 
-<<<<<<< HEAD
     if (collectionSl) {
         var tabSw = new Swiper(collectionSl.querySelector(".swiper-container"), {
             spaceBetween: 12,
@@ -181,35 +180,6 @@ export default function SwiperModule() {
         // mainImg.controller.control = imgThumbs;
         // imgThumbs.controller.control = mainImg;
     }
-=======
-  const colorSl = document.querySelectorAll(".color-content");
-
-  if (colorSl) {
-    colorSl.forEach((ele, i) => {
-      var swiper = new Swiper(ele.querySelector(".swiper-container"), {
-        spaceBetween: 32,
-        speed: 1000,
-        slidesPerView: 4,
-        navigation: {
-          nextEl: ele.querySelector(".next"),
-          prevEl: ele.querySelector(".prev"),
-        },
-      });
-
-      const listCl = ele.querySelectorAll(".swiper-slide");
-
-      listCl.forEach((elem, i) => {
-        elem.addEventListener("click", (e) => {
-          listCl.forEach((ele1, j) => {
-            ele1.classList.remove("cl-active");
-          });
-
-          elem.classList.add("cl-active");
-        });
-      });
-    });
-  }
->>>>>>> 98c6c81a556c658a669008439da05b19a2e25607
 
     const brandLst = document.querySelector(".brand-slide");
 
@@ -519,30 +489,4 @@ export default function SwiperModule() {
             }
         }
     });
-<<<<<<< HEAD
 }
-=======
-
-    swiper2.controller.control = swiper1;
-    swiper1.controller.control = swiper2;
-  }
-
-  const glRelated = document.querySelector(
-    ".glasses-related .swiper-container"
-  );
-
-  if (glRelated) {
-    var swiper1 = new Swiper(glRelated, {
-      spaceBetween: 104,
-      speed: 1000,
-      slidesPerView: 3,
-      loop: true,
-      centeredSlides: true,
-      navigation: {
-        nextEl: glRelated.parentElement.querySelector(".next"),
-        prevEl: glRelated.parentElement.querySelector(".prev"),
-      },
-    });
-  }
-}
->>>>>>> 98c6c81a556c658a669008439da05b19a2e25607
