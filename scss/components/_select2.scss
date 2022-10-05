@@ -103,3 +103,9 @@
     border-radius: 0 0 6px 6px !important;
     overflow: hidden;
 }
+
+.re-select-wrap.white {
+    .select2-selection__rendered {
+        color: #A5A5A5 !important;
+    }
+}

@@ -327,7 +327,7 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.5s;
-    display: inline-block;
+    display: block;
     border-radius: 10rem;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     &.flex {
@@ -512,11 +512,6 @@
     &.four {
         .btn-inner {
             color: $color-pri;
-        }
-        &:hover {
-            .btn-inner {
-                color: white;
-            }
         }
     }
     &.icon {
@@ -822,5 +817,37 @@
         @include fz-18;
         line-height: 1.22;
         color: #FFFFFF;
+    }
+}
+
+.swiper-next,
+.swiper-prev {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 100rem;
+    @include mid-flex;
+    border: 1px solid $color-text;
+    cursor: pointer;
+    @include transitionRe;
+    &.white {
+        border: 1px solid white;
+        i {
+            color: white;
+        }
+    }
+    i {
+        color: $color-text;
+        font-weight: 400;
+    }
+}
+
+.drp-buttons {
+    display: flex !important;
+    .btn {
+        background-color: #f8f8f8;
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 }

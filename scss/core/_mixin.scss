@@ -226,6 +226,10 @@
     font-family: "Quicksand", sans-serif;
 }
 
+@mixin font-second {
+    font-family: "SVN-Gilroy", sans-serif;
+}
+
 @mixin hidden($x: 0, $y: 0) {
     opacity: 0;
     visibility: hidden;

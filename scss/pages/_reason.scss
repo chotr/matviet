@@ -1,0 +1,137 @@
+.reason {
+    overflow: hidden;
+    &-list {
+        margin-bottom: -6rem;
+        justify-content: center;
+        @include max(600px) {
+            margin: 0 -1.5rem;
+            margin-bottom: -4rem;
+        }
+    }
+    &-item {
+        width: calc(100% /3);
+        margin-bottom: 6rem;
+        @include max(600px) {
+            margin-bottom: 4rem;
+        }
+        &:nth-child(1) {
+            @include max($res-mobile) {
+                width: 100%;
+            }
+        }
+        &:nth-child(6n+1) {
+            .reason-icon {
+                background-color: #72C3D5;
+            }
+        }
+        &:nth-child(6n+2) {
+            .reason-icon {
+                background-color: #0E1D61;
+            }
+        }
+        &:nth-child(6n+3) {
+            .reason-icon {
+                background-color: #72C3D5;
+            }
+        }
+        &:nth-child(6n+4) {
+            .reason-icon {
+                background-color: #FACD01;
+            }
+        }
+        &:nth-child(6n+5) {
+            .reason-icon {
+                background-color: #8384AE;
+            }
+        }
+        &:nth-child(6n+6) {
+            .reason-icon {
+                background-color: #ED907A;
+            }
+        }
+        @include max(1000px) {
+            width: calc(100% /2);
+        }
+        @include max(600px) {
+            width: 100%;
+        }
+    }
+    &-head {
+        @include flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        margin-left: 10%;
+        @include max($res-mobile) {
+            margin-left: 0
+        }
+    }
+    &-wrap {
+        @include flex;
+        height: 100%;
+        position: relative;
+    }
+    &-number {
+        margin-right: -5%;
+        z-index: 2;
+        @include max(768px) {
+            position: absolute;
+            left: -5%;
+        }
+        @include max(600px) {
+            position: absolute;
+            left: -2%;
+        }
+        .number {
+            position: relative;
+            top: 4rem;
+            font-size: 10rem;
+            line-height: 1;
+            @include font-second;
+            font-weight: 700;
+            color: white;
+            -webkit-text-stroke: 2px $color-pri;
+            // text-shadow: 2px 0 $color-pri, -2px 0 $color-pri, 0 2px $color-pri, 0 -2px $color-pri, 1px 1px $color-pri, -1px -1px $color-pri, 1px -1px $color-pri, -1px 1px $color-pri;
+            @include max(800px) {
+                font-size: 8rem;
+            }
+        }
+    }
+    &-content {
+        padding: 4.8rem;
+        background-color: #F5F5F5;
+        border-radius: 2.4rem;
+        position: relative;
+        width: 100%;
+    }
+    &-name {
+        color: $color-pri;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.6rem;
+    }
+    &-des {
+        font-weight: 600;
+    }
+    &-icon {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 100rem;
+        @include mid-flex;
+        border: 1rem solid white;
+        position: absolute;
+        top: -4rem;
+        right: -4rem;
+        @include max($res-mobile) {
+            @include posi-horizontal;
+            width: 6rem;
+            height: 6rem;
+            top: -3rem;
+            border: 0.5rem solid white;
+        }
+        .icon {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+}

@@ -4,18 +4,16 @@ export default function DatePickerModule() {
     let today = new Date();
     const openTimePicker = document.querySelector(".openTimePicker.input");
     $(".openTimePicker.text").daterangepicker({
-        minDate: today,
-        autoApply: true,
-        autoUpdateInput: true,
-        timePicker: false,
-        alwaysShowCalendars: true,
-        singleDatePicker: true,
-        startDate: moment().startOf("hour"),
-        locale: {
-            format: "DD/MM/YYYY",
-            separator: " - "
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1800,
+            maxYear: parseInt(moment().format("YYYY"), 10)
+        },
+        function(start, end, label) {
+            // var years = moment().diff(start, "years");
+            // alert("You are " + years + " years old!");
         }
-    });
+    );
     $(".openTimePicker").on("apply.daterangepicker", function(ev, picker) {
         console.log(picker.startDate.format("DD/MM/YYYY"));
         openTimePicker.value = picker.startDate.format("DD/MM/YYYY");
