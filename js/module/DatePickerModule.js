@@ -3,6 +3,12 @@ export default function DatePickerModule() {
     let tomorrow_after = new Date(new Date().valueOf() + 2000 * 3600 * 24);
     let today = new Date();
     const openTimePicker = document.querySelector(".openTimePicker.input");
+    const openTimePickerText = document.querySelector(".openTimePicker.text");
+    if(openTimePicker){
+        if(openTimePicker.value != ''){
+            openTimePickerText.innerHTML = openTimePicker.value;
+        }
+    }
     $(".openTimePicker.text").daterangepicker({
             singleDatePicker: true,
             showDropdowns: true,
@@ -17,6 +23,7 @@ export default function DatePickerModule() {
     $(".openTimePicker").on("apply.daterangepicker", function(ev, picker) {
         console.log(picker.startDate.format("DD/MM/YYYY"));
         openTimePicker.value = picker.startDate.format("DD/MM/YYYY");
+        console.log(openTimePicker.value)
         openTimePicker.setAttribute(
             "data-time",
             picker.startDate.format("DD/MM/YYYY")

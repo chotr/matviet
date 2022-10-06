@@ -55,6 +55,7 @@
             @include max(850px){
                 width: 50%;
             }
+            
         }
 
         &:nth-child(2) {
@@ -89,6 +90,10 @@
             }
         }
 
+        @include max(500px) {
+            width: 100% !important;
+        }
+
         .btn.icon {
             width: fit-content;
 
@@ -111,6 +116,12 @@
         }
     }
 
+    &-logo {
+        @include max(800px) {
+            order: 1;
+        }
+    }
+
     &-content {
         padding-bottom: 4.8rem;
         border-bottom: 1px solid rgba($color: #D3D3D3, $alpha: 0.3);
@@ -119,6 +130,11 @@
     &-social {
         padding: 1.7rem 0;
         border-bottom: 1px solid rgba($color: #D3D3D3, $alpha: 0.3);
+
+        @include max(800px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         .social {
             &-item {
@@ -140,6 +156,11 @@
         .payment {
             margin-left: auto;
             margin-right: 1.2rem;
+            
+
+            @include max(800px) {
+                margin: 2rem 0;
+            }
 
             .text {
                 margin-right: 3.2rem;
@@ -162,10 +183,27 @@
     &-info {
         padding-top: 3rem;
 
+        @include max(800px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .content, .coppyright {
             font-weight: 600;
             font-size: 1.4rem;
             line-height: 1.71;
+        }
+
+        .info-company {
+            @include max(800px) {
+                order: 2;
+                margin: 2rem 0;
+            }
+        }
+        .coppyright {
+            @include max(800px) {
+                order: 3;
+            }
         }
     }
 

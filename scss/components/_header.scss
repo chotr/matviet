@@ -82,8 +82,8 @@
     }
 
     &-act {
-        margin-left: 3.4rem;
-        margin-right: 3.4rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
         position: relative;
 
         @include max(1400px) {
@@ -371,6 +371,31 @@
                 padding: 4rem 3.3rem;
                 height: 100vh;
                 transition: all 0.5s ease-in-out;
+
+                .menu-list {
+                    height: auto;
+                    padding: 0rem 1.5rem;
+                    position: static;
+                    box-shadow: none;
+                    margin-right: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    display: none;
+                    transition: none;
+
+                    .menu-item {
+                        margin-bottom: 0;
+                        background-color: transparent;
+
+                        a {
+                            color: $color-888888;
+
+                            @include min(1201px) {
+                                color: $color-text;
+                            }
+                        }
+                    }
+                }
             }
 
             &-item {

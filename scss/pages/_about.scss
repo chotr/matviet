@@ -728,13 +728,20 @@
         top: 0;
         left: 0;
 
+        @include max(1024px) {
+            
+        }
+
         .content {
             background: rgba(15, 134, 160, 0.9);
             width: 100%;
             height: 100%;
             color: white;
-            transform: translateY(-120%);
             transition: all 0.5s;
+
+            @include min(1201px) {
+                transform: translateY(-120%);
+            }
 
             .seemore {
                 color: white;

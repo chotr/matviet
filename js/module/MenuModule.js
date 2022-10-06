@@ -9,6 +9,7 @@ export default function MenuModule() {
             e.preventDefault();
             icon.classList.toggle("active")
             $(ele.querySelectorAll(".sub-menu-wrap")[0]).stop().slideToggle(300,"linear");
+            $(ele.querySelectorAll(".menu-list")[0]).stop().slideToggle(300,"linear");
         })
         
     })

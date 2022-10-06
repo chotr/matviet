@@ -52,11 +52,20 @@
                     height: auto;
                 }
 
-                .swiper {
+                .swiper {    
                     &-slide {
                         // padding: 11.6rem 5.7rem;
                     }
                 }
+
+                .pro-tag-wrap {
+                    @include max(1024px) {
+                        left: 1.5rem;
+                        top: 1.5rem;
+                    }
+                }
+
+
             }
 
             &-thumbs {
@@ -99,7 +108,7 @@
                     left: 0;
                     right: 0;
                     height: auto;
-                    transform: translateY(-100%);
+                    transform: translateY(calc(-100% - 1rem));
                     @include transition(0.3s, ease-in-out);
 
                     @include max(1200px) {
@@ -143,6 +152,10 @@
                         line-height: 1.57;
                         text-decoration-line: line-through;
                     }
+                }
+
+                .info {
+                    min-height:4.5rem;
                 }
             }
         }
@@ -212,7 +225,7 @@
 
             @include max(1200px) {
                 transform: translate(-50%, 0);
-                ;
+                bottom: 1.5rem;
             }
 
             @include min(1201px) {
@@ -231,6 +244,10 @@
                 padding: 1.4rem 2.9rem 1.3rem;
                 border-radius: 10rem;
                 overflow: hidden;
+
+                @include max(1201px) {
+                    padding: 1.2rem 1.5rem 1.1rem;
+                }
             }
 
             .btn-inner {
@@ -269,17 +286,22 @@
                 @include fz-18;
                 line-height: 1.22;
                 color: $color-pri;
+
+                @include max(1201px) {
+                    font-size: 1.4rem;
+                }
             }
         }
 
         @include min(1201px) {
             &:hover {
                 .content {
-                    transform: translateY(100%);
+                    transform: translateY(8rem);
                 }
 
                 .list-img {
-                    transform: translateY(0)
+                    transform: translateY(0);
+                    
                 }
 
                 .favor {
@@ -328,8 +350,8 @@
                 @include flex;
 
                 @include max(400px) {
-                    width: calc(100% + 12rem);
-                    left: -6rem;
+                    width: calc(100% + 3rem);
+                    left: -1.5rem;
                 }
             }
 
@@ -476,6 +498,8 @@
 
     
 }
+
+
 
 .collection {
     &-i {

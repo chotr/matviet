@@ -138,6 +138,9 @@
     &-18345F {
         color: $color-18345F;
     }
+    &-pink {
+        color: $color-ED907A;
+    }
     &-line {
         position: relative;
         display: inline-block;
@@ -199,7 +202,32 @@
     @include min(800px) {
         white-space: nowrap;
     }
+
+    @include max(1201px) {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+
+    @include max(900px) {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+
+    .inner {
+        @include max(1201px) {
+            width: 4.5rem !important;
+            height: 4.5rem !important;
+        }
+        @include max(1201px) {
+            width: 3.8rem !important;
+            height: 3.8rem !important;
+            font-size: 1.4rem !important;
+        }
+        
+    }
 }
+
+
 
 .t-center {
     text-align: center;

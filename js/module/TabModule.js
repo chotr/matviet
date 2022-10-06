@@ -62,8 +62,31 @@ export default function TabModule() {
     });
   }
 
-  const sortLst2 = document.querySelector(".reviews-sort");
+  const sortLst1 = document.querySelector(".news-filter-container");
 
+  if (sortLst1) {
+    sortLst1.querySelector(".sort-selected").addEventListener("click", () => {
+      $(sortLst1.querySelector(".news-filter-list")).slideToggle(300);
+    });
+
+    sortLst1.querySelector(".sort-selected").innerHTML =
+      sortLst1.querySelector(".news-filter-list .current a").textContent +
+      `<span class="icon"><i class="ti-angle-down"></i></span>`;
+
+    sortLst1.querySelectorAll(".news-filter-item").forEach((ele, i) => {
+      ele.addEventListener("click", () => {
+        sortLst1.querySelectorAll(".news-filter-item").forEach((ele1, i) => {
+          ele1.classList.remove("current");
+        });
+        sortLst1.querySelector(".sort-selected").innerHTML =
+          ele.querySelector("a").textContent +
+          `<span class="icon"><i class="ti-angle-down"></i></span>`;
+        ele.classList.add("current");
+      });
+    });
+  }
+
+  const sortLst2 = document.querySelector(".reviews-sort");
 
   if (sortLst2) {
     sortLst2.querySelector(".selected").innerHTML =
@@ -74,7 +97,7 @@ export default function TabModule() {
       ele.addEventListener("click", () => {
         sortLst2.querySelectorAll(".sort-rv-item").forEach((ele1, i) => {
           ele1.classList.remove("current");
-          $(sortLst2.querySelector(".sort-rv-list")).slideUp(300)
+          $(sortLst2.querySelector(".sort-rv-list")).slideUp(300);
         });
         sortLst2.querySelector(".selected").innerHTML = ele.textContent;
         ele.classList.add("current");

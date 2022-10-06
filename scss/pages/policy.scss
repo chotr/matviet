@@ -1,0 +1,54 @@
+.warning {
+    &-wrap {
+        .decor {
+            left: 50%;
+            transform: translateX(-50%) scale(1.2);
+            top: 47%;
+            pointer-events: none;
+        }
+    }
+
+
+    &-item {
+        padding: 1rem 1.2rem;
+
+        @include max(800px) {
+            width: 100% !important;
+        }
+
+        &-wrap {
+            margin: 0 -1.2rem;
+        }
+
+        .num {
+            width: 7.4rem;
+            padding: 0 1.2rem;
+            font-family: 'SVN-Gilroy';
+            font-weight: 700;
+            @include fz-50;
+            line-height: 1;
+            color: $color-72C3D5;
+            margin-top: -0.5rem;
+
+            @include max(800px) {
+                width: 6.4rem;
+            }
+
+            @include max(600px) {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+        }
+
+        .content {
+            flex: 1;
+            padding: 0 1.2rem;
+        }
+
+        .desc {
+            line-height: 160%;
+            color: #777777;
+        }
+    }
+}

@@ -32,10 +32,7 @@ import ChangeTypeInputModule from "./module/ChangeTypeInputModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import StepsModule from "./module/StepsModule.js";
 import Amount from "./module/amount.js";
-<<<<<<< HEAD
-=======
 
->>>>>>> fbbfabf (about)
 
 window.addEventListener("DOMContentLoaded", () => {
     MobileModule();
@@ -72,9 +69,6 @@ window.addEventListener("DOMContentLoaded", () => {
     ChangeTypeInputModule();
     DatePickerModule();
     StepsModule();
-<<<<<<< HEAD
     Amount();
-=======
-    Amount()
->>>>>>> fbbfabf (about)
+
 });
