@@ -1,0 +1,187 @@
+.form {
+    &-sigup {
+        // padding-bottom: 2.5rem;
+        position: relative;
+        width: calc(100% * 5 / 8);
+
+        @include max(800px) {
+            width: 100%;
+        }
+    }
+
+    &-wrap {
+        margin: 0 -1.2rem;
+        @include flex;
+        flex-wrap: wrap;
+    }
+
+    &-control {
+        width: 50%;
+        padding: 0 1.2rem;
+        margin-bottom: 2.4rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include max(850px) {
+            width: 100%;
+        }
+
+        &.full-w {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1.5rem 1.7rem;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+            font-family: 'Mulish';
+            font-weight: 400;
+            line-height: 1.25;
+            color: black;
+            font-size: 1.6rem;
+
+            &::placeholder {
+                font-weight: 300;
+                font-size: 1.6rem;
+                line-height: 1.25;
+            }
+
+            &::placeholder {
+                font-weight: 300;
+                color: rgba(48, 48, 48, 0.5);
+            }
+
+            &:focus {
+                border-color: $color-pri;
+            }
+        }
+
+
+
+        textarea {
+            min-height: 16.8rem;
+            max-width: 100%;
+            resize: none;
+        }
+    }
+
+    &-select {
+        position: relative;
+
+        .list-select {
+            width: calc(100% - 2.5rem);
+            display: none;
+            z-index: 10;
+            filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1));
+        }
+
+        .item-select {
+            padding: 1rem 2rem;
+            background: white;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s;
+            text-align: left;
+
+            @include min(1200px) {
+                &:hover {
+                    background: $color-pri;
+                    color: white;
+                }
+            }
+
+            &.seleted-item {
+                background: $color-pri;
+                color: white;
+                pointer-events: none;
+            }
+
+
+        }
+
+        input {
+            &:disabled {
+                background: white;
+
+
+            }
+        }
+
+        .selected {
+            width: 100%;
+            background: white;
+            padding: 1.5rem 1.7rem;
+            border-radius: 6px;
+            transition: all 0.3s;
+            font-family: "Mulish";
+            font-weight: 300;
+            line-height: 1.25;
+            font-size: 1.6rem;
+            color: rgba(48, 48, 48, 0.5);
+            display: block;
+            cursor: pointer;
+            position: relative;
+            max-height: 4.9rem;
+            text-align: left;
+
+            .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+                @include mid-flex;
+                position: absolute;
+                right: 1.7rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+                i {
+                    font-size: 1rem;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    &-search {
+        width: 100vw;
+        max-width: 0;
+        position: absolute;
+        right: 0;
+        top: 120%;
+        overflow: hidden;
+        transition: all 0.5s;
+
+        &.active {
+            max-width:  32rem;
+        }
+
+        .form {
+            &-wrap {
+                flex-wrap: nowrap;
+                position: relative;
+                width: 100%;
+                margin: 0;
+            }
+        }
+        
+        .input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 1px solid $color-pri;
+        }
+
+        .btn-search {
+            width: 5rem;
+            background: url("../assets/images/search.svg"), $color-pri;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            background-size: 2rem;
+        }
+    }
+}

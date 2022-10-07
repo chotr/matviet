@@ -1,0 +1,36 @@
+.ct {
+    &-side {
+        margin-bottom: -3rem;
+        &-item {
+            width: calc(100% /2);
+            margin-bottom: 3rem;
+            @include max(768px) {
+                width: 100%;
+            }
+        }
+    }
+    &-fl {
+        &-head {
+            @include flex;
+            align-items: center;
+            .icon {
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-right: 0.8rem;
+            }
+            .text {
+                font-weight: 700;
+            }
+        }
+    }
+    &-map {
+        @include imgPd(307, 535);
+        border-radius: 2.4rem;
+        position: relative;
+        iframe {
+            @include mid;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

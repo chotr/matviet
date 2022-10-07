@@ -1,0 +1,359 @@
+.contact {
+    overflow: hidden;
+
+    &-lst {
+        margin: 0 -1rem -1.7rem;
+    }
+
+    &-item {
+        padding: 0 1rem;
+        margin-bottom: 1.7rem;
+
+        .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            @include mid-flex;
+            color: $color-pri;
+            background: white;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.6;
+        }
+    }
+
+    &-text {
+        @include flex;
+
+        // align-items: center;
+        @include transition(0.3s);
+
+        .text {}
+
+        @include min(1200px) {
+            &:hover {
+                color: $color-second;
+
+                .text {}
+            }
+        }
+    }
+
+    &-section {
+        background: #F2F2F2;
+
+        .contact {
+
+            &-content,
+            &-form {
+                width: 50%;
+
+
+            }
+
+            &-content {
+                @include max(1200px) {
+                    width: 40%;
+                }
+
+                @include max(850px) {
+                    width: 100%;
+                    margin-bottom: 3rem;
+                }
+
+                .list {
+                    .item {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+
+            &-form {
+                @include max(1200px) {
+                    width: 60%;
+                }
+
+                @include max(850px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        a.ct {
+            @include min(1200px) {
+                &:hover {
+                    color: $color-second
+                }
+            }
+        }
+
+        .ct {
+            @include flex;
+            line-height: 1.6;
+            max-width: 32rem;
+            color: $color-text;
+
+            @include max(850px) {
+                max-width: none;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            .icon {
+                width: 2.4rem;
+                display: inline-block;
+                flex-shrink: 0;
+                margin-right: 1rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .tit {
+                display: block;
+                font-weight: 700;
+            }
+        }
+
+        .form {
+            .btn {
+                width: 20rem;
+            }
+        }
+    }
+
+    &-1 {
+        .wrap {
+            &-info {
+                max-width: 28.6rem;
+
+                a,
+                p {
+                    transition: all 0.3s !important;
+                }
+            }
+
+            &-content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                justify-content: center;
+            }
+
+            &-item {
+                border: 1px solid #DADADA;
+                border-radius: 6px;
+                padding-top: 99.58%;
+                position: relative;
+                width: 100%;
+                @include transition(0.3s);
+
+                @include max(850px) {
+                    padding-top: 27%;
+                    min-height: 20rem;
+                }
+
+                .icon {
+                    width: 6rem;
+                    height: 6rem;
+                    @include transition(0.3s);
+
+                    @include max(850px) {
+                        width: 3.5rem;
+                        height: 3.5rem;
+                    }
+
+                    @include max(450px) {
+                        width: 2.8rem;
+                        height: 2.8rem;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .title,
+                .text {
+                    @include max(420px) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .list {
+            &-item {
+                cursor: pointer;
+
+                @include min(1200px) {
+                    &:hover {
+                        .wrap-item {
+                            background: $color-pri;
+
+                            color: white;
+                        }
+
+                        .icon {
+                            filter: brightness(0) invert(1);
+                        }
+
+                        &-info {
+
+                            a,
+                            p {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                @include max(850px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .map {
+            width: 50%;
+
+            @include max(1024px) {
+                width: 100%;
+            }
+
+            &-content {
+                width: 100%;
+                height: 100%;
+                max-height: 70rem;
+                @include imgPd(651, 588);
+
+                iframe {
+                    @include imgCover;
+                }
+            }
+        }
+
+        .info {
+            &-tab {
+                width: 50%;
+
+                @include max(1024px) {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+
+                &-item {
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+
+                    &.active {
+                        .title {
+                            background: $color-pri;
+                            color: white;
+                        }
+
+                        .info-tab-content {
+                            display: block;
+                        }
+
+                        .icon {
+                            i {
+                                transform: rotate(180deg);
+                                color: white !important;
+                            }
+
+                        }
+                    }
+
+                    .title {
+                        padding: 1.3rem 1.5rem;
+                        display: block;
+                        background: #F7F7F7;
+                        border-radius: 6px;
+                        @include transition(0.3s);
+                        position: relative;
+
+                        .icon {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 1.5rem;
+                            font-size: 1rem;
+                            transition: all 0.3s;
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            @include mid-flex;
+                            filter: none;
+
+                            i {
+                                font-weight: 900;
+                                transition: all 0.3s;
+                                // color: $color-pri !important;
+
+                            }
+                        }
+                    }
+
+                    .img {
+                        @include imgPd(270, 588);
+
+                        img {
+                            @include imgCover;
+                        }
+                    }
+
+                    .icon {
+                        // filter: none;
+                        // background: $color-pri !important;
+                    }
+                }
+
+                &-content {
+                    padding: 2.5rem 0;
+                    overflow: hidden;
+                    display: none;
+                }
+            }
+
+            &-content {
+                &-tab {}
+
+                &-wrap {
+                    @include max(1024px) {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+        }
+
+        .contact {
+
+            &-item {
+                display: inline-block;
+
+                .icon {
+                    background: $color-pri !important;
+                    filter: none !important;
+                    i {
+                        transform: none !important;
+                    }
+                }
+            }
+        }
+
+    }
+}

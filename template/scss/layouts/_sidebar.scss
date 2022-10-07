@@ -1,0 +1,72 @@
+.cate {
+    &-item {
+        .title {
+            position: relative;
+            font-weight: 500;
+            padding: 1.5rem 0 1.4rem;
+            cursor: pointer;
+
+            .icon {
+                position: absolute;
+                width: 2.4rem;
+                height: 2.4rem;
+                right: 1.6rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+                &-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    &::after,
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        height: 3px;
+                        width: 24px;
+                        background: $color-pri;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(0.5);
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &::after {
+                        transform: translate(-50%, -50%) scale(0.5) rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .title {
+                color: $color-pri;
+
+                .icon {
+                    &-inner {
+                        &::after {
+                            transform: translate(-50%, -50%) scale(0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.sub-cate {
+    display: none;
+
+    &-item {
+        padding: 1.5rem 0;
+        list-style: disc;
+        margin-left: 2.4rem;
+
+        a {
+            color: #716969;
+
+        }
+    }
+}

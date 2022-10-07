@@ -1,0 +1,56 @@
+.recruit {
+    &-list {
+        margin-bottom: -2.4rem;
+    }
+    &-item {
+        width: calc(100% /3);
+        margin-bottom: 2.4rem;
+        @include transitionRe;
+        @include max(900px) {
+            width: calc(100% /2);
+        }
+        @include max(600px) {
+            width: calc(100% /1);
+        }
+    }
+    &-wrap {
+        padding: 4rem;
+        @include transitionRe;
+        border-radius: 2.4rem;
+        border: 1px solid transparent;
+        @include max($res-mobile) {
+            border: 1px solid $color-second;
+            padding: 1.6rem;
+        }
+        &:hover {
+            border: 1px solid $color-second;
+        }
+        @include min($res-mobile-min) {
+            &:hover {
+                .btn {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-name {
+        margin-bottom: 1.6rem
+    }
+    &-fl {
+        @include flex;
+        align-items: center;
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-right: 0.8rem;
+        }
+    }
+    .btn {
+        margin-top: 1.6rem;
+        @include transitionRe;
+        @include min($res-mobile-min) {
+            opacity: 0;
+            margin-top: 1.6rem;
+        }
+    }
+}
